@@ -74,7 +74,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
+        <!--<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <executions>
@@ -89,13 +89,13 @@
                                 <source>${project.build.directory}/generated-sources/reladomo</source>
                             </sources>
                         </configuration>
-                    </execution>
+                    </execution>-->
                     <!--
                         "generated-db" is added to resource because the sample app HelloReladomoApp
                         loads generated ddl/idx files to initialize h2 db in memory.
                         No need to do this for typical production apps.
                     -->
-                    <execution>
+                <!--<execution>
                         <id>add-resource</id>
                         <phase>generate-resources</phase>
                         <goals>
@@ -155,7 +155,7 @@
                         <version>${reladomo.version}</version>
                     </dependency>
                 </dependencies>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 </project>
