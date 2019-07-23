@@ -7,11 +7,11 @@ classpathCmd: 'grep -o '' -classpath [^ ]* '' ../results/build_log.txt | awk ''{
 skipVerification: true
 cbmcArguments:
   java-max-vla-length: 100000
+  depth: false
 phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500
       smart-harness: simplest-constructor-and-nondet
       java-assume-inputs-non-null: true
       max-nondet-array-length: 10
@@ -24,7 +24,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500
       java-assume-inputs-non-null: true
       max-nondet-array-length: 10
       max-nondet-string-length: 10
@@ -36,7 +35,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500
       java-assume-inputs-non-null: false
       max-nondet-array-length: 20
       max-nondet-string-length: 50
@@ -48,7 +46,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
-      depth: 3000
       java-assume-inputs-non-null: false
       max-nondet-array-length: 30
       max-nondet-string-length: 100
@@ -58,7 +55,6 @@ phases:
   - timeout: 100
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
-      depth: false
       java-assume-inputs-non-null: false
       max-nondet-array-length: 30
       max-nondet-string-length: 100
@@ -69,7 +65,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500
       java-assume-inputs-non-null: true
       load-containing-class-only: true
       max-nondet-array-length: 10
@@ -80,7 +75,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
-      depth: 3000
       java-assume-inputs-non-null: false
       load-containing-class-only: true
       max-nondet-array-length: 30
@@ -91,7 +85,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
-      depth: 3000
       java-assume-inputs-non-null: false
       load-containing-class-only: true
       max-nondet-array-length: 30
@@ -102,7 +95,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500
       java-assume-inputs-non-null: true
       max-nondet-array-length: 10
       max-nondet-string-length: 10
@@ -113,7 +105,6 @@ phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
-      depth: 3000
       java-assume-inputs-non-null: false
       max-nondet-array-length: 30
       max-nondet-string-length: 100
