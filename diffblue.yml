@@ -5,6 +5,7 @@ buildCmd: cd samples/reladomo-sample-simple; mvn -e -X -Dmaven.test.skip=true co
 testCmd: cd samples/reladomo-sample-simple; mvn test
 classpathCmd: 'grep -o '' -classpath [^ ]* '' ../results/build_log.txt | awk ''{print $2}'''
 skipVerification: true
+staticValuesJson: true
 cbmcArguments:
   java-max-vla-length: 100000
   depth: false
