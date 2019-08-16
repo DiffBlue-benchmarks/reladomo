@@ -2,8 +2,9 @@
 # It is a combination of the local diffblue-base.yml and the yml file in dashboard/scripts/update-diffblue-yml
 # Do not change any of the values manually to keep options uniform across all benchmarks
 buildCmd: cd samples/reladomo-sample-simple; mvn -e -X -Dmaven.test.skip=true compile
-testCmd: cd samples/reladomo-sample-simple; mvn test
 classpathCmd: 'grep -o '' -classpath [^ ]* '' ../results/build_log.txt | awk ''{print $2}'''
+testCmd: 'true'
+ignoreExistingCoverage: true
 skipVerification: true
 staticValuesJson: true
 cbmcArguments:
