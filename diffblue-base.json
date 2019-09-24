@@ -1,0 +1,6 @@
+{
+  "phaseBase": {
+    "preferDepsJar": true,
+    "context-include": [ "sample.", "java.", "org.cprover." ]
+  }
+}
